@@ -1,0 +1,287 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right ,rgb(192, 127, 6), black);
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+}
+
+.logo img {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px; 
+    border-radius:100px ;
+}
+
+.logo1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+}
+
+.logo2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links i {
+    margin-right: 3px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+}
+
+.nav-links a:active {
+    color: orange; 
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+.intro {
+    display: flex;
+    align-items: center; 
+}
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 15%;
+    margin-top: 15%;
+    animation: seesaw 2s ease-in-out infinite alternate; /* Adjust animation duration and timing function */
+    transform-origin: bottom center; /* Set the transform origin to the bottom center */
+}
+
+@keyframes seesaw {
+    0% {
+        transform: rotateZ(0deg); /* Start with no rotation */
+    }
+    50% {
+        transform: rotateZ(15deg); /* Rotate to one direction */
+    }
+    100% {
+        transform: rotateZ(-15deg); /* Rotate to the other direction */
+    }
+}
+
+
+    .intro img:hover {
+        transform: scale(1.1);
+        transition-delay: 0s; 
+    }
+
+.intro-content {
+    width: 50%;
+}
+
+
+.intro h2 {
+    font-size: 3rem; /* Increase font size for heading */
+    margin-bottom: 20px; /* Add space below heading */
+    animation: slideInText 1s ease-out forwards; /* Apply animation to the heading */
+}
+
+@keyframes slideInText {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+}
+
+
+
+.btn {
+    background-color:#ce6509;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, margin-top 0.3s ease; /* Added margin-top to the transition */
+    margin-top: 20px; /* Added margin-top */
+    animation: pulse 1s infinite alternate; /* Added animation */
+}
+
+.btn i{
+    margin-right: 3px;
+}
+
+.btn:hover {
+    background-color: orange;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.social-media {
+    margin-top: 20px; /* Add some space between the paragraph and social media icons */
+    margin-bottom: 50px;
+    transition: background-color 0.3s ease, margin-top 0.3s ease; /* Added margin-top to the transition */
+    animation: pulse 1s infinite alternate; /* Added animation */
+}
+
+.social-media a {
+    color: #fff; /* Set the color of social media icons */
+    margin-right: 10px; /* Add some space between social media icons */
+    font-size: 24px; /* Adjust the size of social media icons */
+    transition: color 0.3s ease; /* Add transition effect */
+}
+
+.social-media a:hover {
+    color: orange; /* Change color on hover */
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;;
+    }
+
+    .logo img {
+        width: 50px; 
+        height: auto;
+        margin-right: 5px; 
+        border-radius:100px ;
+    }
+    .logo1 {
+        font-size: 20px;
+        font-weight: bold;
+        color: orange;
+    }
+    
+    .logo2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .nav-links a {
+        margin-right: 15px;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro > div{
+        order: 2; /* Change order to move image below paragraph */
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+    
+    .intro img {
+        max-width: 90%; 
+        height: auto; 
+        margin-left: 5%; 
+        animation: fadeInUp 1.5s ease-out;
+        margin-top: 10%;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;;
+    }
+
+    .logo img {
+        width: 50px; 
+        height: auto;
+        border-radius:100px ;
+        margin-left: 5px;
+    }
+    .logo1 {
+       display: none;
+    }
+    
+    .logo2 {
+        display: none;
+    }
+    
+    .nav-links a {
+        font-size: 15px;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro > div {
+        order: 2; /* Change order to move image below paragraph */
+    }
+
+    .intro-content {
+        text-align: center;
+    }
+}

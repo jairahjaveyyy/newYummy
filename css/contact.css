@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient( to right, rgb(192, 127, 6), black);
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+}
+
+.logo img {
+    width: 50px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add spacing between the logo and text */
+    border-radius:100px ;
+}
+
+.logo1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+}
+
+.logo2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+.nav-links i {
+    margin-right: 3px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+}
+
+.nav-links a:active {
+    color: orange; 
+}
+
+.nav-links a:hover {
+    color: orange;
+}
+
+.contact{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    
+}
+
+.contact img {
+    margin-left: 35%;
+    width: 60%;
+    height: auto;
+    border-radius: 50px;
+    animation: flipImage 1.5s ease-out;
+}
+
+@keyframes flipImage {
+    0% {
+        transform: rotateY(0deg); /* Start with no rotation */
+    }
+    100% {
+        transform: rotateY(360deg); /* Rotate 360 degrees for one full flip */
+    }
+}
+
+
+
+
+.title {
+    text-align: center;
+    margin-top: 3%;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.socmed h1 {
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.socmed i{
+    color: orange;
+}
+
+.socmed h1:hover {
+    color: orange;
+    animation: floatAnimation 1s infinite alternate; /* Adjust duration and animation type as needed */
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the distance of floating */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 50px; 
+        height: auto;
+        margin-right: 5px; 
+        border-radius:100px ;
+        margin-left: 5px;
+    }
+    .logo1 {
+        font-size: 20px;
+        font-weight: bold;
+        color: orange;
+    }
+    
+    .logo2 {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .nav-links a {
+        margin-right: 15px;
+    }
+
+    .contact{
+        display: flex;
+    }
+
+    .contact img{
+        margin-left: 15%;
+    }
+
+    .socmed h1 {
+        margin-right: 150px;
+        font-size: 16px;
+    }
+}
+
+    
+
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;;
+    }
+
+    .logo img {
+        width: 50px; 
+        height: auto;
+        border-radius:100px ;
+    }
+    .logo1 {
+       display: none;
+    }
+    
+    .logo2 {
+        display: none;
+    }
+    
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .contact{
+        display: block; 
+    }
+
+    .socmed h1{
+        margin-left: 22%;
+    }
+
+    
+    
+}
+
